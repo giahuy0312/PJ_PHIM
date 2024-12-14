@@ -12,9 +12,20 @@
     <div class="container">
         <form action="insert.php" method="post">
             <div class="row">
+                <label for="basic-url" class="form-label">Tên phim</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">Tên phim</span>
                     <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="tenphim">
+                </div>
+
+                <div class="d-block mb-2">
+                    <label for="basic-url" class="form-label">Danh mục</label>
+                    <a href="./editcategories.php" class="btn btn-primary">Thêm danh mục</a>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                        <?php include('getcategories.php') ?>
+                    </div>
                 </div>
 
                 <div class="mb-3">

@@ -6,6 +6,11 @@ $tenphim = "";
 $linkphim = "";
 $linkanh = "";
 $linkanhtest = "./src/image/no.png";
+$danhmuc;
+
+// foreach ($_POST['danhmuc'] as $e) {
+//     echo $e;
+// }
 
 //Lấy giá trị POST từ form vừa submit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
