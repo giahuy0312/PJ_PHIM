@@ -18,13 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["linkphim"])) {
         $linkphim = $_POST['linkphim'];
     }
-    if ($_POST["linkanh"] != "") {
+    if (isset($_POST["linkanh"])) {
         $linkanh = $_POST['linkanh'];
-    } {
-        $linkanh = $linkanhtest;
     }
     if (basename($_FILES["image"]["name"]) != "") {
         $linkanh = "./src/image/" . basename($_FILES["image"]["name"]);
+    }
+    if ($linkanh == "") {
+        $linkanh = $linkanhtest;
     }
 
     // Thư mục đích để lưu ảnh
