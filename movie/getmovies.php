@@ -14,10 +14,10 @@ if ($result->num_rows > 0) {
                         <img src='{$row['linkanh']}' alt=''>
                     </a>
                     <p class='name'>{$row['tenphim']}</p>
-                    <a class='name button-sua-hidden' href=editmovies.php?id={$row['id']}>
+                    <a class='name button-sua-hidden' href=./movie/editmovies.php?id={$row['id']}>
                         <button class='btn btn-primary' type='submit'>Sửa</button>
                     </a>
-                    <form action='delete.php' method='get' class='name button-xoa-hidden'>
+                    <form action='./movie/delete.php' method='get' class='name button-xoa-hidden'>
                         <input name='id' value='{$row['id']}' hidden>
                         <button class='btn btn-danger' type='submit'>Xoá</button>
                     </form>

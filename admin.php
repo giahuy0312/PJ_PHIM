@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-        <form action="insert.php" method="post">
+        <form action="./movie/insert.php" method="post">
             <div class="row">
                 <label for="basic-url" class="form-label">Tên phim</label>
                 <div class="input-group mb-3">
@@ -20,11 +20,11 @@
 
                 <div class="d-block mb-2">
                     <label for="basic-url" class="form-label">Danh mục</label>
-                    <a href="./editcategories.php" class="btn btn-primary">Thêm danh mục</a>
+                    <a href="./category/addcategories.php" class="btn btn-primary">Thêm danh mục</a>
                 </div>
                 <div class="input-group mb-3">
                     <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                        <?php include('getcategories.php') ?>
+                        <?php include('./category/getcategories.php') ?>
                     </div>
                 </div>
 
@@ -48,7 +48,7 @@
         </form>
 
         <div class='row row-cols-2 row-cols-lg-5 g-2 g-lg-3'>
-            <?php include('getmovies.php') ?>
+            <?php include('./movie/getmovies.php') ?>
         </div>
 
 </body>
