@@ -46,7 +46,7 @@
     <div class="container text-center mt-5">
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
 
-            <?php include('getmovies.php') ?>
+            <?php include('./movie/getmovies.php') ?>
 
             <div class="col">
                 <div class="p-3">

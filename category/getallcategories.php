@@ -1,6 +1,6 @@
 <?php
-include("db.php");
-include("boottrap.php");
+include("../db.php");
+// include("../boottrap.php");
 
 $sql = 'SELECT * FROM category';
 $result = $conn->query($sql);
@@ -21,8 +21,12 @@ if ($result->num_rows > 0) {
                 <tr>
                     <th scope='row'>{$row['id']}</th>
                     <td>{$row['danhmuc']}</td>
-                    <td>
-                        Sua, Xoa
+                    <td class='d-flex'>
+                        <a href='./editcategory.php?id={$row['id']}' class='btn btn-primary'>Sửa</a>
+                        <form action='./delete.php' method='get' class=''>
+                            <input name='id' value='{$row['id']}' hidden>
+                            <button class='btn btn-danger' type='submit'>Xoá</button>
+                        </form>
                     </td>
                 </tr>";
     }

@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+include("../db.php");
 
 // sql to edit a record
 $id = 0;
@@ -7,12 +7,12 @@ $id = 0;
 if (isset($_GET["id"])) {
     $id = $_GET['id'];
 } else {
-    header("Location: index.php");
+    header("Location: ../index.php");
 }
 $sql = "SELECT * FROM phim WHERE id=$id";
 $result = $conn->query($sql);
 
-include('boottrap.php');
+include('../boottrap.php');
 
 $num = "";
 

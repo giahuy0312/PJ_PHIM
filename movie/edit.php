@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+include("../db.php");
 
 //Khai báo giá trị ban đầu, nếu không có thì khi chưa submit câu lệnh insert sẽ báo lỗi
 $id = "";
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Thư mục đích để lưu ảnh
-    $target_dir = "./src/image/";
+    $target_dir = "../src/image/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Sửa dữ liệu thành công";
-        header("Location: index.php");
+        header("Location: ../index.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
